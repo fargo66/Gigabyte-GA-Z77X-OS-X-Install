@@ -70,6 +70,13 @@
 		<key>BooterConfig</key>
 		<string>0x28</string>
 	</dict>
+	<key>KernelAndKextPatches</key>
+	<dict>
+		<key>ForceKextsToLoad</key>
+		<array>
+			<string>\System\Library\Extensions\AppleHDA.kext</string>
+		</array>
+	</dict>
 	<key>SMBIOS</key>
 	<dict>
 		<key>ProductName</key>
