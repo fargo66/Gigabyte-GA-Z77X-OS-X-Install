@@ -4,22 +4,6 @@
 <dict>
 	<key>ACPI</key>
 	<dict>
-		<key>DSDT</key>
-		<dict>
-			<key>Debug</key>
-			<false/>
-			<key>DropOEM_DSM</key>
-			<false/>
-			<key>Fixes</key>
-			<dict>
-				<key>FixRegions_10000000</key>
-				<true/>
-				<key>NewWay_80000000</key>
-				<true/>
-			</dict>
-			<key>ReuseFFFF</key>
-			<false/>
-		</dict>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
@@ -27,16 +11,16 @@
 			<key>Generate</key>
 			<dict>
 				<key>CStates</key>
-				<false/>
+				<true/>
 				<key>PStates</key>
-				<false/>
+				<true/>
 			</dict>
 		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 nv_disable=1</string>
+		<string>kext-dev-mode=1 nv_disable=1 -v</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -49,25 +33,6 @@
 		<integer>5</integer>
 		<key>XMPDetection</key>
 		<true/>
-	</dict>
-	<key>Devices</key>
-	<dict>
-		<key>Audio</key>
-		<dict>
-			<key>AFGLowPowerState</key>
-			<false/>
-			<key>Inject</key>
-			<false/>
-			<key>ResetHDA</key>
-			<true/>
-		</dict>
-		<key>USB</key>
-		<dict>
-			<key>FixOwnership</key>
-			<false/>
-			<key>Inject</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>GUI</key>
 	<dict>
@@ -89,7 +54,7 @@
 			<key>Entries</key>
 			<true/>
 			<key>Legacy</key>
-			<false/>
+			<true/>
 			<key>Tool</key>
 			<true/>
 		</dict>
@@ -98,44 +63,22 @@
 		<key>Theme</key>
 		<string>embedded</string>
 	</dict>
-	<key>Graphics</key>
+	<key>RtVariables</key>
 	<dict>
-		<key>Inject</key>
-		<dict>
-			<key>ATI</key>
-			<false/>
-			<key>Intel</key>
-			<true/>
-			<key>NVidia</key>
-			<false/>
-		</dict>
-		<key>ig-platform-id</key>
-		<string>0x0166000a</string>
+		<key>CsrActiveConfig</key>
+		<string>0x67</string>
+		<key>BooterConfig</key>
+		<string>0x28</string>
 	</dict>
-	<key>KernelAndKextPatches</key>
+	<key>SMBIOS</key>
 	<dict>
-		<key>AppleRTC</key>
-		<false/>
-		<key>KextsToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>TRIM Enabler</string>
-				<key>Find</key>
-				<data>QVBQTEUgU1NEAA==</data>
-				<key>Name</key>
-				<string>IOAHCIBlockStorage</string>
-				<key>Replace</key>
-				<data>AAAAAAAAAAAAAA==</data>
-			</dict>
-		</array>
+		<key>ProductName</key>
+		<string>iMac13,2</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
 		<key>InjectKexts</key>
 		<string>Yes</string>
-		<key>InjectSystemID</key>
-		<true/>
 	</dict>
 </dict>
 </plist>
